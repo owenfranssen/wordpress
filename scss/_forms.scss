@@ -1,0 +1,71 @@
+/** FORMS **/
+$padding-x: .75rem;
+$padding-y: .75rem;
+
+input,
+textarea,
+label,
+.form-control {
+  height: auto;
+  padding: $padding-y $padding-x;
+}
+
+.input-group {
+  position: relative;
+  
+  .input-group-append,
+  .input-group-prepend {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .input-group-append {
+    right: 0;
+  }
+}
+
+.form-label-group {
+  font-size: 0.875rem;
+  position: relative;
+
+  label {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: $light;
+    display: block;
+    left: 0;
+    line-height: 1.5;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.1s ease-in-out;
+    width: 100%;
+  }
+
+  .form-control {
+    font-size: 1em;
+    padding: $padding-y $padding-x;
+
+    // &:focus,
+    // &.focus {
+    //   background-color: $dark;
+    //   border-color: $light;
+    //   box-shadow: 0 0 0 1px $light;
+    // }
+
+    &:not(:placeholder-shown) {
+      padding-top: calc(#{$padding-y} + #{$padding-y} * (2 / 3));
+      padding-bottom: calc(#{$padding-y} / 3);
+
+      &~label {
+        padding-top: calc(#{$padding-y} / 3);
+        padding-bottom: calc(#{$padding-y} / 3);
+        font-size: 0.75em;
+        color: $secondary; //darken($light, 20%);
+      }
+    }
+  }
+}

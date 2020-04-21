@@ -1,0 +1,21 @@
+<?php
+// if ( ! defined( 'ABSPATH' ) ) {
+// 	exit; // Exit if accessed directly.
+// }
+
+require_once($_SERVER['DOCUMENT_ROOT']."/data/wp-load.php");
+
+$dealers = get_posts([
+  'post_type' => 'dealers'
+]);
+
+FOREACH($dealers AS $i => $dealer) {
+  $dealers[$i] = array(
+      'name' => $dealer->name,
+      'link' => get_permalink($dealer),
+      'id' => $dealer->ID
+    );
+}
+
+ECHO json_encode($dealers);
+wp_reset_postdata();

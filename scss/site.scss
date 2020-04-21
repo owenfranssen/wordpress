@@ -1,0 +1,184 @@
+// sass-lint:disable no-css-comments space-after-comma single-line-per-selector indentation property-sort-order final-newline
+@import 'colours/scheme-2';
+@import 'base';
+
+/* Custom Styling */
+html { 
+  @include media(">=tablet") {
+    font-size: $font-size-base * 1.1;
+  }
+
+  @include media(">=tablet") {
+    font-size: $font-size-base * 1.2;
+  }
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2rem;
+
+  @include media('>=tablet') {
+    font-size: 2.5rem;
+  }
+}
+
+a { color: inherit; }
+
+p {
+  &:empty { 
+    display:none; 
+  }
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+hr,.hr {
+  border: 0;
+  border-bottom: 1px solid $light;
+  margin: 0 auto;
+  width: 10%;
+
+  &.dark {
+    border-color: $dark;
+  }
+  &.light {
+    border-color: $light;
+  }
+}
+
+.bg-light hr { border-color: $secondary; }
+
+header {
+  min-height: 100px;
+}
+
+.brand-img {
+  max-width: 200px;
+  height: auto;
+  width: 100%;
+}
+
+.nav-link { 
+  border-bottom: 2px solid transparent;
+  color: $dark; 
+  display: inline-block;
+  
+  &:hover {
+    border-color: $secondary;
+    transition: all .5s ease-in-out;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  display: block;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-weight: 700;
+}
+
+h1+.subheading, .h1+.subheading {
+  font-size: 1.25rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+ul, ol {
+  &.pl-0 {
+    li {
+      list-style-position: inside;
+    }
+  }
+
+  li { 
+    color: $secondary;
+    
+    * {
+      color: $dark;
+    }
+  }
+}
+
+@import 'branding';
+
+@import 'first-page';
+
+@import 'product-category';
+
+@import 'product-card';
+
+@import 'forms';
+
+@import 'search-box';
+
+@import 'brands-single';
+
+@import 'dealers-single';
+
+@import 'vendor/leaflet';
+
+.subscribe {
+  form {
+    margin: 0 auto;
+    
+    @include media('>=tablet') {
+      width: 60%;
+    }
+  }
+  .form-control {
+    background: transparent;
+    border: 2px solid #fff;
+    color: $light;
+
+    &:focus,
+    &.focus {
+      background-color: $dark;
+      border-color: $light;
+      box-shadow: 0 0 0 1px $light;
+    }
+  }
+  .btn {
+    border-radius: 0;
+    border-width: 2px !important;
+    color: $light;
+    height: calc(100% - (#{$spacer} * 0.25 * 2));
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+footer {
+  .menu {
+    a, a:hover {
+      color: $white;
+    }
+
+    li:hover {
+      i {
+        animation-name: spin;
+        animation-duration: 800ms;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        color: $primary !important;
+      }
+    }
+  }
+}
+
+@import 'animations';

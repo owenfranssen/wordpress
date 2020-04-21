@@ -1,0 +1,26 @@
+/** Brands Single Page **/
+
+.single-brands {
+  .product-photos {
+    img {
+      height: auto;
+      width: 100%;
+
+      @include media(">=tablet") {
+        width: 200px;
+      }
+    }
+  }
+
+  @include media('<tablet') {
+    .breadcrumb-item {
+      padding-left: .5rem;
+      
+      &:before,
+      & +.breadcrumb-item:before {
+        content: '';
+        padding: 0;
+      }
+    }
+  }
+}

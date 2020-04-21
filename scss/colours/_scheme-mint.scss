@@ -1,0 +1,45 @@
+$coolors: (
+  'black': #333,
+  'dark': #666,
+  'mid': #a9a9a9,
+  'light': #efefef,
+  'secondary': #ff3b3f,
+  'primary': #b0e7f3
+);
+
+/* Overwrite Bootstrap Defaults */
+$primary: map-get($coolors, 'primary');
+$light: map-get($coolors, 'light');
+$middle: map-get($coolors, 'mid');
+$dark: map-get($coolors, 'dark');
+$black: map-get($coolors, 'black');
+$secondary: map-get($coolors, 'secondary');
+
+/* Colour Classes */
+.bg-black {
+  background-color: $black;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.bg-medium {
+  background: $middle;
+}
+
+.bg-light {
+  background: $light;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-medium {
+  color: $middle;
+}
+
+.text-light {
+  color: $light;
+}

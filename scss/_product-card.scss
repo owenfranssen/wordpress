@@ -1,0 +1,21 @@
+/** PRODUCT THUMBNAIL CARDS **/
+.product-thumb {
+  @extend .card;
+
+  text-align: center;
+
+  .card-img-top {
+    height: 10rem;
+    width: auto;
+  }
+  
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  
+
+  .card-body {
+    padding-bottom: 0;
+  }
+}

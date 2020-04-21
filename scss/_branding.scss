@@ -1,0 +1,18 @@
+.branding {
+  .row {
+    background-size: 70%;
+    background-position: 25% 20%;
+  }
+
+  h1,.h1 { font-size: 1.75rem; }
+  h2,.h2 { font-size: 0.9em; }
+
+  @include media('>=tablet') {
+    h1,.h1 { font-size: 3.5rem; }
+    h2,.h2 { font-size: 1.1em; }
+  }
+  @include media('>=desktop') {
+    h1,.h1 { font-size: 4rem; }
+    h2,.h2 { font-size: 1.25em; }
+  }
+}

@@ -1,0 +1,54 @@
+$caia005: (
+  'darkgrey': rgba(68, 68, 68, 1),
+  'lightgrey': rgba(121, 123, 126, 1),
+  //'blue': rgba(8, 77, 165, 1),
+  'blue': rgb(78, 142, 209),
+  'white': rgba(228, 237, 235, 1),
+  'orange': rgba(242, 91, 5, 1)
+);
+
+$blue: map-get($caia005, 'blue');
+$orange: map-get($caia005, 'orange');
+$grey: map-get($caia005, 'darkgrey');
+$lightgrey: map-get($caia005, 'lightgrey');
+//$light: map-get($caia005, 'white');
+
+/* Overwrite Bootstrap Defaults */
+$primary: $blue;
+$light: map-get($caia005, 'white');
+$middle: $lightgrey;
+$dark: $grey;
+$secondary: $orange;
+
+/* Colour Classes */
+.bg-blue {
+  background: $blue;
+}
+
+.bg-orange {
+  background: $orange;
+}
+
+.bg-medium {
+  background: $lightgrey;
+}
+
+.bg-light {
+  background: $light;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-medium {
+  color: $lightgrey;
+}
+
+.text-light {
+  color: $light;
+}

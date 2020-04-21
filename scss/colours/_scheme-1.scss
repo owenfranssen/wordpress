@@ -1,0 +1,50 @@
+/* Colours */
+$orange-blue-corporate: ('blue': rgba(24, 110, 163, 1),
+  'lightblue': rgba(144, 189, 212, 1),
+  'paleblue': rgba(216, 232, 244, 1),
+  'white': #fff,
+  'orange': rgba(242, 96, 1, 1));
+$custom-theme-colors: $orange-blue-corporate;
+$blue: map-get($orange-blue-corporate, 'blue');
+$orange: map-get($custom-theme-colors, 'orange');
+$paleblue: map-get($custom-theme-colors, 'paleblue');
+$lightblue: map-get($custom-theme-colors, 'lightblue');
+
+/* Overwrite Bootstrap Defaults */
+$primary: $blue;
+$secondary: $lightblue;
+$light: $paleblue;
+$warning: $orange;
+
+/* Colour Classes */
+.bg-blue {
+  background: $blue;
+}
+
+.bg-orange {
+  background: $orange;
+}
+
+.bg-medium {
+  background: $lightblue;
+}
+
+.bg-light {
+  background: $paleblue;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-medium {
+  color: $lightblue;
+}
+
+.text-light {
+  color: $paleblue;
+}
