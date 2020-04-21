@@ -1,2 +1,4 @@
-# wordpress
-Wordpress customisations of use
+# Timeless
+Wordpress customisations for Timeless custom theme
+
+Understrap child theme
